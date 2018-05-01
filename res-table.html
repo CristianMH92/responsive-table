@@ -1,0 +1,37 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="res-table">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h1>Cristian</h1>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `res-table`
+     * responsive table
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class ResTable extends Polymer.Element {
+      static get is() { return 'res-table'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'res-table'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(ResTable.is, ResTable);
+  </script>
+</dom-module>
